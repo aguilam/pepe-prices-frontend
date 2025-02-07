@@ -23,10 +23,12 @@ export type MinecraftBarrel = {
   z: number;
 };
 const Home: React.FC = React.memo(() => {
-  posthog.init("phc_quBimTXwONpVFo4wDhdo2Wf1Em7ttdix1AhakaNatIZ", {
-    api_host: "https://us.i.posthog.com",
-    person_profiles: "always",
+
+  posthog.init(import.meta.env.VITE_POSTHOG_KEY, {
+      api_host: import.meta.env.VITE_POSTHOG_API_HOST,
+      person_profiles: "always",
   });
+
   const { data, error, isLoading } = useQuery<ItemType[]>({
     queryKey: ["fetchData"],
     queryFn: async () => {
