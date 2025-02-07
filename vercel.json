@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://pepe-price-backend.onrender.com/$1"
+    }
+  ]
+}
