@@ -23,25 +23,6 @@ export type MinecraftBarrel = {
   z: number;
 };
 const Home: React.FC = React.memo(() => {
-  console.log("VITE_API_URL from process.env:", process.env.VITE_API_URL);
-  console.log(
-    "VITE_REACT_APP_PUBLIC_POSTHOG_KEY:",
-    process.env.VITE_REACT_APP_PUBLIC_POSTHOG_KEY
-  );
-  console.log(
-    "VITE_REACT_APP_PUBLIC_POSTHOG_HOST:",
-    process.env.VITE_REACT_APP_PUBLIC_POSTHOG_HOST
-  );
-  console.log("VITE_API_URL:", import.meta.env.VITE_API_URL);
-  console.log(
-    "VITE_REACT_APP_PUBLIC_POSTHOG_KEY:",
-    import.meta.env.VITE_REACT_APP_PUBLIC_POSTHOG_KEY
-  );
-  console.log(
-    "VITE_REACT_APP_PUBLIC_POSTHOG_HOST:",
-    import.meta.env.VITE_REACT_APP_PUBLIC_POSTHOG_HOST
-  );
-
   posthog.init(import.meta.env.VITE_REACT_APP_PUBLIC_POSTHOG_KEY, {
     api_host: import.meta.env.VITE_REACT_APP_PUBLIC_POSTHOG_HOST,
     person_profiles: "always",
